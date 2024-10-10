@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .red{
+        background-image: url("img_207569_thomasedison.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+      }
+      .pink{
+        width: 345px;
+        background-color: rgb(119, 114, 114);
+      }
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+  
+        .btn-bd-primary {
+          --bd-violet-bg: #712cf9;
+          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-violet-bg);
+          --bs-btn-border-color: var(--bd-violet-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          --bs-btn-hover-bg: #6528e0;
+          --bs-btn-hover-border-color: #6528e0;
+          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          --bs-btn-active-bg: #5a23c8;
+          --bs-btn-active-border-color: #5a23c8;
+        }
+  
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+  
+        .bd-mode-toggle .dropdown-menu .active .bi {
+          display: block !important;
+        }
+      </style>
+  <script>
+    setInterval(() => {  
+      a=new Date();
+      let date=a.toDateString();
+      let Time=a.getHours() +':'+a.getMinutes()+':'+a.getSeconds()+':'+a.getMilliseconds();
+      document.getElementById("time").innerHTML=Time+"<br>on<hr>"+date;
+    }, 1);
+  </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol id="check2" viewBox="0 0 16 16">
+              <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+            </symbol>
+            <symbol id="circle-half" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+            </symbol>
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+              <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+            </symbol>
+            <symbol id="sun-fill" viewBox="0 0 16 16">
+              <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+            </symbol>
+          </svg>
+      
+          <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme"
+                    type="button"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    aria-label="Toggle theme (auto)">
+              <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+              <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                  Light
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                  Dark
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                  <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  Auto
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+      
+          
+      <main>
+        <div class="container py-4">
+          <header class="pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+              <span class="fs-4">CLOCK TIMINGS</span>
+            </a>
+          </header>
+      
+          <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid py-5">
+              <h1 class="time">DATE AND TIME IS : <span id="time"></span></h1>
+
+
+              <p class="col-md-8 fs-4"></p>
+              <button class="btn btn-primary btn-lg" type="button">Browse more</button>
+            </div>
+          </div>
+            
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+              <div class="h-100 p-5 text-bg-dark rounded-3">
+                <div class="red">
+                  <br><br><br><br><br><br><br><br><br><br><br>
+                <button class="btn btn-outline-light" type="button">Example button</button>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+                <div class="pink"><h2>Add borders</h2>
+<img src="data:image/jpeg;base64,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" alt="img">
+<br><br><br><br><br><hr>
+                <button class="btn btn-outline-secondary" type="button">Example button</button>
+              </div>
+              </div>
+            </div>
+          </div>
+      
+          <footer class="pt-3 mt-4 text-body-secondary border-top">
+            &copy; 2024
+          </footer>
+        </div>
+      </main>
+      <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
